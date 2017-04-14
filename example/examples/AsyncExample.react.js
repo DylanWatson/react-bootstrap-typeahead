@@ -43,7 +43,7 @@ const AsyncExample = React.createClass({
         checked={this.state[name]}
         key={name}
         name={name}
-        onChange={this._handleChange}>
+        onInput={this._handleChange}>
         {label}
       </Checkbox>
     ));

@@ -35,7 +35,7 @@ const BodyContainerExample = React.createClass({
         </div>
         <Checkbox
           checked={bodyContainer}
-          onChange={e => this.setState({bodyContainer: e.target.checked})}>
+          onInput={e => this.setState({bodyContainer: e.target.checked})}>
           Attach menu to document body
         </Checkbox>
       </div>

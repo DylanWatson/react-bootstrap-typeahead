@@ -106,7 +106,7 @@ const asyncContainer = Typeahead => {
           allowNew={shouldAllowNew}
           emptyLabel={emptyLabel}
           isLoading={this.state.requestPending}
-          onChange={this._handleChange}
+          onInput={this._handleChange}
           onInputChange={this._handleInputChange}
           options={useCache && cachedQuery ? cachedQuery : options}
           ref={instance => this._instance = instance}
@@ -144,7 +144,7 @@ const asyncContainer = Typeahead => {
     },
 
     _handleChange(selected) {
-      this.props.onChange && this.props.onChange(selected);
+      this.props.onInput && this.props.onInput(selected);
       this.setState({hasSelection: !!selected.length});
     },
 

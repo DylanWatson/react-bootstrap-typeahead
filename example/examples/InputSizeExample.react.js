@@ -32,7 +32,7 @@ const InputSizeExample = React.createClass({
           <Radio
             checked={bsSize === value}
             key={value || 'default'}
-            onChange={e => this.setState({bsSize: value})}
+            onInput={e => this.setState({bsSize: value})}
             value={value}>
             {label}
           </Radio>

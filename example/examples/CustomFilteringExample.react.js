@@ -48,7 +48,7 @@ const CustomFilteringExample = React.createClass({
           <Radio
             checked={filterBy === value}
             key={value}
-            onChange={e => this.setState({filterBy: value})}
+            onInput={e => this.setState({filterBy: value})}
             value={value}>
             {label}
           </Radio>

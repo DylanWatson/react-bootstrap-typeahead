@@ -25,7 +25,7 @@ const BasicExample = React.createClass({
         />
         <Checkbox
           checked={multiple}
-          onChange={e => this.setState({multiple: e.target.checked})}>
+          onInput={e => this.setState({multiple: e.target.checked})}>
           Multi-Select
         </Checkbox>
       </div>

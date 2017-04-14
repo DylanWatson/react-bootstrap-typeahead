@@ -4,7 +4,7 @@
 Name | Type | Default | Description
 -----|------|---------|------------
 align | One of: `justify`, `left`, `right` | 'justify' | Specify menu alignment. The default value is `justify`, which makes the menu as wide as the input and truncates long values. Specifying `left` or `right` will align the menu to that side and the width will be determined by the length of menu item values.
-allowNew | boolean | false | Allows the creation of new selections on the fly. Any new items will be added to the list of selections, but not the list of original options unless handled as such by `Typeahead`'s parent. The newly added item will *always* be returned as an object even if the other options are simply strings, so be sure your `onChange` callback can handle this.
+allowNew | boolean | false | Allows the creation of new selections on the fly. Any new items will be added to the list of selections, but not the list of original options unless handled as such by `Typeahead`'s parent. The newly added item will *always* be returned as an object even if the other options are simply strings, so be sure your `onInput` callback can handle this.
 autoFocus | boolean | false | Autofocus the input when the component initially mounts.
 bodyContainer | boolean | false | Whether to render the menu inline or attach to `document.body`.
 bsSize | one of: `'large'`, `'lg'`, `'small'`, `'sm'` | | Specify the size of the input.
@@ -24,7 +24,7 @@ multiple | boolean | false | Whether or not multiple selections are allowed.
 name | string | | Name property for the input
 newSelectionPrefix | string | 'New selection:' | Provides the ability to specify a prefix before the user-entered text to indicate that the selection will be new. No-op unless `allowNew={true}`.
 onBlur | function | | Invoked when the input is blurred. Receives an event.
-onChange | function | | Invoked whenever items are added or removed. Receives an array of the selected options.
+onInput | function | | Invoked whenever items are added or removed. Receives an array of the selected options.
 onFocus | function | | Invoked when the input is focused. Receives an event.
 onInputChange | function | | Invoked when the input value changes. Receives the string value of the input.
 onPaginate | function | | Invoked when the pagination menu item is clicked.

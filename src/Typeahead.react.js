@@ -106,7 +106,7 @@ const Typeahead = React.createClass({
      * Invoked whenever items are added or removed. Receives an array of the
      * selected options.
      */
-    onChange: PropTypes.func,
+    onInput: PropTypes.func,
     /**
      * Invoked when the input is focused. Receives an event.
      */
@@ -165,7 +165,7 @@ const Typeahead = React.createClass({
       minLength: 0,
       multiple: false,
       onBlur: noop,
-      onChange: noop,
+      onInput: noop,
       onFocus: noop,
       onInputChange: noop,
       onPaginate: noop,
@@ -333,7 +333,7 @@ const Typeahead = React.createClass({
       text,
     });
 
-    this.props.onChange(selected);
+    this.props.onInput(selected);
     this.props.onInputChange(text);
   },
 
@@ -374,7 +374,7 @@ const Typeahead = React.createClass({
         labelKey={labelKey}
         onAdd={this._handleAddOption}
         onBlur={this._handleBlur}
-        onChange={this._handleTextChange}
+        onInput={this._handleTextChange}
         onFocus={this._handleFocus}
         onKeyDown={e => this._handleKeydown(results, e)}
         onRemove={this._handleRemoveOption}
@@ -560,7 +560,7 @@ const Typeahead = React.createClass({
   },
 
   _handleAddOption(selectedOption) {
-    const {multiple, labelKey, onChange, onInputChange} = this.props;
+    const {multiple, labelKey, onInput, onInputChange} = this.props;
 
     let selected;
     let text;
@@ -584,7 +584,7 @@ const Typeahead = React.createClass({
     });
     this._hideDropdown();
 
-    onChange(selected);
+    onInput(selected);
     onInputChange(text);
   },
 
@@ -605,7 +605,7 @@ const Typeahead = React.createClass({
     this.setState({selected});
     this._hideDropdown();
 
-    this.props.onChange(selected);
+    this.props.onInput(selected);
   },
 
   /**

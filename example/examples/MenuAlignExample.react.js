@@ -32,7 +32,7 @@ const MenuAlignExample = React.createClass({
           <Radio
             checked={align === value}
             key={value}
-            onChange={e => this.setState({align: value})}
+            onInput={e => this.setState({align: value})}
             value={value}>
             {label}
           </Radio>

@@ -52,12 +52,12 @@ const FilteringExample = React.createClass({
         />
         <Checkbox
           checked={caseSensitive}
-          onChange={e => this.setState({caseSensitive: e.target.checked})}>
+          onInput={e => this.setState({caseSensitive: e.target.checked})}>
           Case-sensitive filtering
         </Checkbox>
         <Checkbox
           checked={!ignoreDiacritics}
-          onChange={e => this.setState({ignoreDiacritics: !e.target.checked})}>
+          onInput={e => this.setState({ignoreDiacritics: !e.target.checked})}>
           Don't ignore diacritical marks
         </Checkbox>
       </div>

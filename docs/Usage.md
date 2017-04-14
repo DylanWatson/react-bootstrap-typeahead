@@ -2,7 +2,7 @@
 The typeahead behaves similarly to other form elements. It requires an array of data options to be filtered and displayed.
 ```jsx
 <Typeahead
-  onChange={this._handleChange}
+  onInput={this._handleChange}
   options={myData}
 />
 ```
@@ -13,7 +13,7 @@ The component provides single-selection by default, but also supports multi-sele
 ```jsx
 <Typeahead
   multiple
-  onChange={this._handleChange}
+  onInput={this._handleChange}
   options={myData}
 />
 ```
@@ -24,7 +24,7 @@ Like an `input`, the component can be [controlled](https://facebook.github.io/re
 ```jsx
 // Controlled
 <Typeahead
-  onChange={this._handleChange}
+  onInput={this._handleChange}
   options={myData}
   selected={selected}
 />
@@ -32,7 +32,7 @@ Like an `input`, the component can be [controlled](https://facebook.github.io/re
 // Uncontrolled
 <Typeahead
   defaultSelected={selected}
-  onChange={this._handleChange}
+  onInput={this._handleChange}
   options={myData}
 />
 ```

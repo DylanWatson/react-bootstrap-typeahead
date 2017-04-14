@@ -50,7 +50,7 @@ const RenderingExample = React.createClass({
           <Radio
             checked={selectedOption === value}
             key={value}
-            onChange={e => this.setState({selectedOption: value})}
+            onInput={e => this.setState({selectedOption: value})}
             value={value}>
             {label}
           </Radio>

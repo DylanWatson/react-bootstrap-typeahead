@@ -26,7 +26,7 @@ const LabelKeyExample = React.createClass({
         />
         <Checkbox
           checked={paginate}
-          onChange={e => this.setState({paginate: !!e.target.checked})}>
+          onInput={e => this.setState({paginate: !!e.target.checked})}>
           Paginate results
         </Checkbox>
       </div>

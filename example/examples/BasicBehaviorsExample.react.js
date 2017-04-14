@@ -32,25 +32,25 @@ const BasicBehaviorsExample = React.createClass({
           <Checkbox
             checked={disabled}
             name="disabled"
-            onChange={this._handleChange}>
+            onInput={this._handleChange}>
             Disable
           </Checkbox>
           <Checkbox
             checked={dropup}
             name="dropup"
-            onChange={this._handleChange}>
+            onInput={this._handleChange}>
             Dropup menu
           </Checkbox>
           <Checkbox
             checked={!!minLength}
             name="minLength"
-            onChange={this._handleChange}>
+            onInput={this._handleChange}>
             Require minimum input before showing results (2 chars)
           </Checkbox>
           <Checkbox
             checked={emptyLabel}
             name="emptyLabel"
-            onChange={this._handleChange}>
+            onInput={this._handleChange}>
             Hide the menu when there are no results
           </Checkbox>
         </FormGroup>

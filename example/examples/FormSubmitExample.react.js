@@ -30,7 +30,7 @@ const FormSubmitExample = React.createClass({
         </InputGroup>
         <Checkbox
           checked={submitFormOnEnter}
-          onChange={e => this.setState({submitFormOnEnter: e.target.checked})}>
+          onInput={e => this.setState({submitFormOnEnter: e.target.checked})}>
           Allow form submission
         </Checkbox>
       </form>

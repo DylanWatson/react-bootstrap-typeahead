@@ -27,7 +27,7 @@ const TypeaheadInput = React.createClass({
    *  - labelKey
    *  - onAdd
    *  - onBlur
-   *  - onChange
+   *  - onInput
    *  - onClick
    *  - onFocus
    *  - onKeydown
@@ -104,7 +104,7 @@ const TypeaheadInput = React.createClass({
             'has-selection': !!selected.length,
           })}
           onBlur={this._handleBlur}
-          onChange={this._handleChange}
+          onInput={this._handleChange}
           onKeyDown={this._handleKeydown}
           ref={input => this._input = input}
           style={{
@@ -154,7 +154,7 @@ const TypeaheadInput = React.createClass({
     const {onRemove, selected} = this.props;
     !!selected.length && onRemove(head(selected));
 
-    this.props.onChange(e.target.value);
+    this.props.onInput(e.target.value);
   },
 
   /**

@@ -26,7 +26,7 @@ See full documentation in the [Filtering section](Filtering.md#filterby).
 ##### `labelKey`, `renderMenu`, `renderMenuItemChildren`, and `renderToken`
 See full documentation in the [Rendering section](Rendering.md).
 
-##### `onChange(selectedItems)`
+##### `onInput(selectedItems)`
 Invoked when the set of selections changes (ie: an item is added or removed). For consistency, `selectedItems` is always an array of selections, even multi-selection is not enabled.
 
 ##### `onInputChange(text)`
